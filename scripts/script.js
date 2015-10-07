@@ -37,7 +37,7 @@ function _start() {
             document.time.wh.value = ++wh;
             wm = 0;
         }
-        setTimeout("_start()", 0.0001); 
+        setTimeout("_start()", 1000); 
     }   
 }
 
@@ -56,7 +56,7 @@ function _pause() {
             document.time.rh.value = ++rh;
             rm = 0;
         }
-        setTimeout("_pause()", 0.0001);
+        setTimeout("_pause()", 1000);
     }
 }
 

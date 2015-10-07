@@ -4,6 +4,10 @@ body, button {
 	font: inherit;
 }
 
+body, input, textarea {
+	background: #fff url('../images/cream_dust.png') repeat center center;
+}
+
 .row {
 	text-align: center;
 }
@@ -11,7 +15,7 @@ body, button {
 button, label, h1, input, textarea {
 	font-family: "Open Sans", "Verdana", sans-serif;
 	font-weight: 100;
-	font-size: 18px;
+	font-size: 24px;
 }
 
 button {
@@ -21,7 +25,7 @@ button {
 	border: none;
 	background-color: #1ABF4F;
 	color: #fff;
-	font-size: 18px;
+	font-size: 24px;
 	cursor: pointer;
 }
 
@@ -29,12 +33,12 @@ input {
 	display: inline;
 	border: none;
 	color: #fff;
-	width: 60px;
-	height: 60px;
+	width: 70px;
+	height: 70px;
 	margin: 10px;
 	padding: 8px;
 	text-align: center;
-	font-size: 48px;
+	font-size: 60px;
 }
 
 .work {	
