@@ -37,7 +37,7 @@ function _start() {
             document.time.wh.value = ++wh;
             wm = 0;
         }
-        setTimeout("_start()", 1000); 
+        setTimeout("_start()", 0.0001); 
     }   
 }
 
@@ -56,7 +56,7 @@ function _pause() {
             document.time.rh.value = ++rh;
             rm = 0;
         }
-        setTimeout("_pause()", 1000);
+        setTimeout("_pause()", 0.0001);
     }
 }
 
@@ -65,4 +65,42 @@ function logTime(action) {
     document.backlog.backlog.value += "\n" + action + " " + 
                                         currentDate.getHours() +
                                         ":" + currentDate.getMinutes();
+}
+
+function saveTextAsFile()
+{
+    var textToWrite = document.getElementById("backlog").value + 
+                        "\n\nTOTAL\nwork:    " + 
+                        document.time.wh.value + 
+                        " hours " + document.time.wm.value + 
+                        " minutes" +
+                        "\nrest:    " + document.time.rh.value + 
+                        " hours " + document.time.rm.value + " minutes";
+
+    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+    var fileNameToSaveAs = "backlog.txt";
+
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+
+    downloadLink.innerHTML = "My Hidden Link";
+
+    window.URL = window.URL || window.webkitURL;
+          
+
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+
+    downloadLink.onclick = destroyClickedElement;
+
+    downloadLink.style.display = "none";
+
+    document.body.appendChild(downloadLink);
+    
+
+    downloadLink.click();
+}
+
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
 }

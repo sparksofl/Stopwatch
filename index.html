@@ -26,13 +26,13 @@
 		<div class="">
 			<button onclick="start()" class="start">start</button>
 			<button onclick="pause()" class="pause">pause</button>
-			<button onclick="window.location.reload()" class="reset">reset</button>
+			<button onclick="window.location.reload(); saveTextAsFile()" class="reset">reset</button>
 		</div>
 	</div>
 
 	<div class="row">
 		<form name="backlog">
-			<textarea type="text" name="backlog" class="backlog" readonly></textarea>
+			<textarea type="text" id="backlog" name="backlog" class="backlog" readonly></textarea>
 		</form>
 	</div>
 </body>
