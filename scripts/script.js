@@ -124,14 +124,6 @@ $(document).ready(function() {
     //     $('span').addClass('done');
     // });
 
-    $('.cb').change(function() {
-        alert();
-    });
-
-    $('li').on('click', 'span', function() {
-        alert();
-    });
-
 
     var $item = $('.td-item');
     $item.keyup(function (e) {
@@ -141,4 +133,16 @@ $(document).ready(function() {
             $item.val('');
         }
     });
+
+
+
+    $('ul').on('click', 'li .cb', function() {
+         $(this).closest('li').find('span').toggleClass('done');
+    });
+
+    $('ul').on('click', 'li span', function() {
+        alert();
+    });
+
+    
 });

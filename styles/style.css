@@ -4,7 +4,7 @@ body, button {
 	font: inherit;
 }
 
-body, input, textarea {
+body, .work, .rest, textarea {
 	background: #fff url('../images/cream_dust.png') repeat center center;
 }
 
@@ -70,23 +70,33 @@ input {
 }
 
 li {	
-	font-size: 16px;
+	font-size: 18px;
 	text-align: left;
 	color: #fff;
 	cursor: hand;
-	margin-left: -20px 10px;
+	margin: -20px 10px;
 }
 
-input.td-item {
+.td-item {
 	position: relative;
-	color: #333;
+	color: #fff;
 	width: 80%;
 	height: 20px;
-	border: 1px solid #999;
 	font-size: 16px;
 	margin: 10px;
+	text-align: left;
+
+
+	background-color: #37375A !important;
+	border: 0;
+	border-bottom: 1px solid #D8D8D8;
 }
 
+.td-item:focus {
+	/*border: 0;
+	border-bottom: 1px solid #fff;*/
+	outline: 0;
+}
 .content {
 	float: right;
 	width: 70%;
@@ -98,8 +108,7 @@ input.td-item {
 	width: 30%;
 	height: 100%;
 	padding: 5px;
-	background-color: #317dd3;
-	opacity: 0.7;
+	background-color: #37375A;
 }
 
 ul {
