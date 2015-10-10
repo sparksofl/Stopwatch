@@ -46,18 +46,29 @@ input {
 	color: #1ABF4F;
 }
 
-.rest {
-	color: #ff6d5e;
+.start:hover {
+	background-color: #05A538;
 }
 
-.reset {
-	background-color: #bdc3c7;
+.rest {
+	color: #ff6d5e;
 }
 
 .pause {
 	background-color: #ff6d5e;
 }
 
+.pause:hover {
+	background-color: #F74836;
+}
+
+.reset {
+	background-color: #bdc3c7;
+}
+
+.reset:hover {
+	background-color: #9BA1A5;
+}
 .backlog {
 	color: #666;
 	font-size: 18px;
@@ -72,9 +83,13 @@ input {
 li {	
 	font-size: 18px;
 	text-align: left;
-	color: #fff;
-	cursor: hand;
+	color: #ccc;
+	cursor: pointer;
 	margin: -20px auto;
+}
+
+li:hover {
+	color: #fff;
 }
 
 .td-item {

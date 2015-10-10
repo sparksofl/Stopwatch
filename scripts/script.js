@@ -118,12 +118,7 @@ function switchMode() {
 }
 
 $(document).ready(function() {
-
-    // $('input').on('click', 'cb', function() {
-    //     alert("123");
-    //     $('span').addClass('done');
-    // });
-
+    $('ul').sortable();
 
     var $item = $('.td-item');
     $item.keyup(function (e) {
@@ -135,14 +130,7 @@ $(document).ready(function() {
     });
 
 
-
     $('ul').on('click', 'li .cb', function() {
          $(this).closest('li').find('span').toggleClass('done');
-    });
-
-    $('ul').on('click', 'li span', function() {
-        alert();
-    });
-
-    
+    });    
 });
