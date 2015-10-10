@@ -12,7 +12,7 @@ body, input, textarea {
 	text-align: center;
 }
 
-button, label, h1, input, textarea {
+button, label, h1, input, textarea, li {
 	font-family: "Open Sans", "Verdana", sans-serif;
 	font-weight: 100;
 	font-size: 22px;
@@ -32,7 +32,7 @@ button {
 input {
 	display: inline;
 	border: none;
-	color: #fff;
+	/*color: #fff;*/
 	width: 70px;
 	height: 70px;
 	margin: 10px;
@@ -67,4 +67,53 @@ input {
 	rows: 800;
 	resize: none;
 	height: 300px;
+}
+
+li {	
+	font-size: 16px;
+	text-align: left;
+	color: #fff;
+	cursor: hand;
+	margin-left: -20px 10px;
+}
+
+input.td-item {
+	position: relative;
+	color: #333;
+	width: 80%;
+	height: 20px;
+	border: 1px solid #999;
+	font-size: 16px;
+	margin: 10px;
+}
+
+.content {
+	float: right;
+	width: 70%;
+}
+
+.row.td-list {
+	position: absolute;
+	float: left;
+	width: 30%;
+	height: 100%;
+	padding: 5px;
+	background-color: #317dd3;
+	opacity: 0.7;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: -20px 0;
+} 
+
+input[type='checkbox'] {
+	height: 15px;
+	width: 15px;
+	vertical-align: sub;
+}
+
+.done {
+	text-decoration: line-through;
 }

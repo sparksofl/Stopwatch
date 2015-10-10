@@ -1,5 +1,6 @@
 var wh = 0, wm = 0, ws = 0, rh = 0, rm = 0, rs = 0;
 var isStartClicked = false, isPauseClicked = false;
+var isDayTheme = true;
     
 function start() {
     isStartClicked = true;  
@@ -104,3 +105,40 @@ function destroyClickedElement(event)
 {
     document.body.removeChild(event.target);
 }
+
+function switchMode() {
+    var a = document.createElement('a');
+    a.setAttribute("id", "night");
+    a.href = "night.css";
+    if (!isDayTheme) {
+        document.head.appendChild(a);
+    } else {
+        document.head.removeChild(document.getElementById("night"));
+    }
+}
+
+$(document).ready(function() {
+
+    // $('input').on('click', 'cb', function() {
+    //     alert("123");
+    //     $('span').addClass('done');
+    // });
+
+    $('.cb').change(function() {
+        alert();
+    });
+
+    $('li').on('click', 'span', function() {
+        alert();
+    });
+
+
+    var $item = $('.td-item');
+    $item.keyup(function (e) {
+        if (e.keyCode == 13 && $(this).val()!='') {
+            $('.td-list ul').append("<li><input type ='checkbox' class='cb'/><span>" + $(this).val() + "</span></li>");
+            $('li').addClass('list-item');
+            $item.val('');
+        }
+    });
+});
